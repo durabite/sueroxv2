@@ -31,9 +31,12 @@ button {
     }
 }
 main {
+    width: 100%;
     height: 100vh;
     background: rgb(221,60,95);
-    background: linear-gradient(90deg, rgba(221,60,95,1) 0%, rgba(134,35,58,1) 25%, rgba(221,60,95,1) 50%, rgba(134,35,58,1) 75%, rgba(221,60,95,1) 100%);
+    background: url("../image/luces-bg.png"),  linear-gradient(90deg, rgba(221,60,95,1) 0%, rgba(134,35,58,1) 25%, rgba(221,60,95,1) 50%, rgba(134,35,58,1) 75%, rgba(221,60,95,1) 100%);
+    background-size: 100%;
+    background-repeat: no-repeat;
     // background: rgb(0,155,255);
     // background: linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(69,197,215,1) 40%, rgba(7,71,119,1) 100%);
     img {
@@ -50,28 +53,23 @@ footer {
 }
 .marco-principal {
     background: rgb(40,138,126);
-background: linear-gradient(90deg, rgba(40,138,126,1) 0%, rgba(220,77,111,1) 50%, rgba(59,153,208,1) 100%);
+    background: linear-gradient(90deg, rgba(40,138,126,1) 0%, rgba(220,77,111,1) 50%, rgba(59,153,208,1) 100%);
     width: 70%;
     height: 50%;
     position: relative;
     border-radius: 10px;
     border: 4px solid white;
     box-sizing: content-box;
+
 }
-.caja-formulario {
-    background-color: $azul;
+.caja-formulario, .caja-preguntas {
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
     border: 4px solid white;
     border-radius: 10px;
     color: white;
 }
-.caja-preguntas {
-    background-color: $verde;
-    width: 100%;
-    border: 4px solid white;
-    border-radius: 10px;
-    color: white;
-}
+
 .caja-final {
     background-color: #232323;
     width: 75%;
@@ -82,14 +80,12 @@ background: linear-gradient(90deg, rgba(40,138,126,1) 0%, rgba(220,77,111,1) 50%
 .input-grande {
     font-size: 1.3rem;
 }
-.titulo-formulario {
-    color: #1A52A1;
+.titulo-formulario, .titulo-preguntas {
+    color: white;
     font-weight: bolder;
+    font-size: 2rem;
 }
-.titulo-preguntas {
-    color: #0A4040;
-    font-weight: bolder;
-}
+
 .titulo-final {
     color: white;
     font-weight: bolder;

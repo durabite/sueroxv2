@@ -1,28 +1,11 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sitio de activacion de Suerox</title>
-    
-    <!-- Estilos Boostrap V 5.2 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<?php include("includes/header.php") ?>
 
-    <!-- Estilos Custom -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Material Design Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css
-    ">
-
-  </head>
-  <body>
     <main class="d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-8 d-flex justify-content-center align-items-center">
                 
-                        <form action="" class="p-3 caja-preguntas text-center" >
+                        <form action="final.php" class="p-3 caja-preguntas text-center" >
                             
                             <div class="mb-3">
                                 <h4 class="titulo-preguntas">¿Hay veces que tienes la boca reseca?</h4>
@@ -60,7 +43,9 @@
                                   </div>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-primary btn-lg">Enviar</button>
+                                <a href="final.php">
+                                    <button class="btn btn-primary btn-lg">Enviar</button>
+                                </a>
                             </div>
                         </form>
                     
@@ -75,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <footer class="fixed-bottom">
+        <footer class="fixed-bottom animate__animated animate__fadeOutDown animate__delay-3s">
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center align-items-center pt-3">
@@ -86,8 +71,4 @@
         </footer>
     </main>
     
-    <!-- JS Bootstrap V 5.2 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    
-</body>
-</html>
+<? include("includes/footer.php") ?>

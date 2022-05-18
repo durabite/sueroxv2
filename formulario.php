@@ -1,47 +1,40 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sitio de activacion de Suerox</title>
-    
-    <!-- Estilos Boostrap V 5.2 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<?php include("db.php") ?>
+<?php include("includes/header.php") ?>
 
-    <!-- Estilos Custom -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Material Design Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css
-    ">
-
-  </head>
-  <body>
     <main class="d-flex align-items-center">
         <div class="container">
             <div class="row">
-                <div class="col-8 d-flex justify-content-center align-items-center">
-                
-                        <form action="" class="p-3 caja-formulario text-center" >
-                            <div class="mb-3">
+                <div class="col-8">
+                        
+                        <!-- Formulario -->
+                        <form action="datos.php" method="POST"  class="p-3 caja-formulario text-center" >
+                            
+                        <!-- Nombre -->
+                        <div class="mb-3">
                                 <h4 class="titulo-formulario">Nombre</h4>
-                                <input type="text" name="" id="" class="form-control">
+                                <input type="text" name="nombre" id="" class="form-control">
                             </div>
+
+                            <!-- Correo Electronico -->
                             <div class="mb-3">
                                 <h4 class="titulo-formulario">Correo</h4>
-                                <input type="email" name="" id="" class="form-control">
+                                <input type="email" name="correo" id="" class="form-control">
                             </div>
+
+                            <!-- Sexo -->
                             <div class="mb-3">
                                 <h4 class="titulo-formulario"><i class="mdi mdi-gender-male-female"></i> Sexo</h4>
                                 <div class="form-check form-check-inline input-grande">
-                                    <input class="form-check-input" type="radio" name="sexo" id="mujer" value="mujer">
+                                    <input class="form-check-input" type="radio" name="sexo" id="mujer" value="Mujer">
                                     <label class="form-check-label" for="mujer">Mujer</label>
                                   </div>
                                   <div class="form-check form-check-inline input-grande">
-                                    <input class="form-check-input" type="radio" name="sexo" id="hombre" value="hombre">
+                                    <input class="form-check-input" type="radio" name="sexo" id="hombre" value="Hombre">
                                     <label class="form-check-label" for="hombre">Hombre</label>
                                   </div>
                             </div>
+
+                            <!-- Edades -->
                             <div class="mb-3">
                                 <h4 class="titulo-formulario"><i class="mdi mdi-human-male-female"></i> Edad</h4>
                                 <div class="form-check form-check-inline input-grande">
@@ -70,9 +63,9 @@
                                   </div>
                             </div>
 
+                            <!-- Estados -->
                             <div class="mb-3">
-                            
-                                <select class="form-select" id="inputGroupSelect01">
+                                <select class="form-select" id="inputGroupSelect01" name="ubicacion">
                                     <option selected>Selecciona un estado</option>
                                     <option value="Aguascalientes">Aguascalientes</option>
                                     <option value="Baja California">Baja California</option>
@@ -109,23 +102,27 @@
                                   </select>
                             </div>
 
+                            <!-- Boton enviar -->
                             <div class="mb-3">
-                                <button class="btn btn-primary btn-lg">Enviar</button>
+                                <input type="submit" class="btn btn-primary btn-lg" name="enviar" value="Enviar">
                             </div>
                         </form>
                     
-                    
+                        
                 </div>
+
                 <div class="col-4">
-                    <img src="image/botella-azul.png" alt="Suerox Mora-Azul" class="img-fluid">
+                
+                          <img src="image/botella-azul.png" alt="Suerox Mora-Azul" class="img-fluid">
+                        
                 </div>
                 <div class="col-12 text-center mt-4">
-                    <p class="texto-mk">HIDRATACIÓN <span>SALUDABLE</span></p>
-                    <p class="texto-mk2">QUE SE SIENTE</p>
-                </div>
+                            <p class="texto-mk">HIDRATACIÓN <span>SALUDABLE</span></p>
+                            <p class="texto-mk2">QUE SE SIENTE</p>
+                        </div>
             </div>
         </div>
-        <footer class="fixed-bottom">
+        <footer class="fixed-bottom animate__animated animate__fadeOutDown animate__delay-3s">
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center align-items-center pt-3">
@@ -136,8 +133,4 @@
         </footer>
     </main>
     
-    <!-- JS Bootstrap V 5.2 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    
-</body>
-</html>
+    <? include("includes/footer.php") ?>

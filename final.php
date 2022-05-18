@@ -1,22 +1,5 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sitio de activacion de Suerox</title>
-    
-    <!-- Estilos Boostrap V 5.2 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<?php include("includes/header.php") ?>
 
-    <!-- Estilos Custom -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Material Design Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css
-    ">
-
-  </head>
-  <body>
     <main class="d-flex align-items-center">
         <div class="container">
             <div class="row">
@@ -25,14 +8,14 @@
                         <div class="p-3 caja-final text-center" >
                             <p class="titulo-final">Es posible que estés deshidratado</p>
                             <p class="titulo-final2">¡NECESITAS!</p>
-                            <img src="image/SUEROX.png" alt="Logo Suerox" style="width: 300px;">
+                            <img src="image/SUEROX.png" alt="Logo Suerox" style="width: 300px;" class="animate__bounceIn">
                             <div class="mb-3">
                                
                             </div>
                         </div>
                 </div>
                 <div class="col-12 text-center mt-4">
-                    <a href="index.html" class="btn btn-outline-light btn-lg">
+                    <a href="index.php" class="btn btn-outline-light btn-lg">
                         <div class="d-flex">
                             <i class="mdi mdi-close me-2"></i><span>Regresar</span>
                         </div>
@@ -44,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <footer class="fixed-bottom">
+        <footer class="fixed-bottom animate__animated animate__fadeOutDown animate__delay-3s">
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center align-items-center pt-3">
@@ -55,8 +38,4 @@
         </footer>
     </main>
     
-    <!-- JS Bootstrap V 5.2 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    
-</body>
-</html>
+<? include("includes/footer.php") ?>
