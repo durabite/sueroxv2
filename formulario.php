@@ -12,13 +12,13 @@
                         <!-- Nombre -->
                         <div class="mb-3">
                                 <h4 class="titulo-formulario">Nombre</h4>
-                                <input type="text" name="nombre" id="" class="form-control">
+                                <input type="text" name="nombre" class="form-control">
                             </div>
 
                             <!-- Correo Electronico -->
                             <div class="mb-3">
                                 <h4 class="titulo-formulario">Correo</h4>
-                                <input type="email" name="correo" id="" class="form-control">
+                                <input type="email" name="correo" class="form-control">
                             </div>
 
                             <!-- Sexo -->

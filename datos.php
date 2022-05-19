@@ -1,4 +1,5 @@
 <?php
+
   include("db.php");
 
   if (isset($_POST['enviar'])) {
@@ -6,17 +7,18 @@
     $correo = $_POST['correo'];
     $sexo = $_POST['sexo'];
     $edad = $_POST['edad'];
-    $creado = date("d/m/y");
-    $ubicacion = $_POST ['ubicacion'];
+    $ubicacion = $_POST['ubicacion'];
+    $creado = date("Y-m-d H:i:s");
 
-    $query = "INSERT INTO lead(nombre, correo, sexo, edad, creado, ubicacion) VALUES ('$nombre', '$correo', '$sexo', '$edad', '$creado', '$ubicacion')";
-    $resultado = mysqli_query($conex, $query);
+    $sql = "INSERT INTO users(nombre, correo, sexo, edad, creado, ubicacion) VALUES ('$nombre', '$correo', '$sexo', '$edad','$creado','$ubicacion');";
 
-    if (!$resultado) {
-      die("No se guardo");
+    if ($conn->query($sql) === TRUE) {
+      //echo "New record created successfully";
+      header("Location: preguntas.php");
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    header ("Location: preguntas.php");
-
-  }
+    $conn->close();
+  };
  ?>
